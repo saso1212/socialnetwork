@@ -3,6 +3,7 @@ import './Header.css';
 import Button from '../../UI/Button/Button';
 import Input from '../../UI/Input/Input';
 import SignUp from '../../components/SignUp/SignUp';
+
 class Header extends Component {
     state={
             username:"",

@@ -19,6 +19,7 @@ app.use(cors);
 //Router Middleware
 app.use(allRoutes);
 
+
 app.all('*',  (req, res) => {    
     res.status(404).send('Url not found');
 });

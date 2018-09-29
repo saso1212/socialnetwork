@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
 import './SignUp.css'
+import axios from 'axios';
 
 class SignUp extends Component{
     state={
@@ -22,16 +23,18 @@ class SignUp extends Component{
         this.setState({email:event.target.value})
     }
     onChangeAge=(event)=>{
-        this.setState({age:this.event.age})
+        this.setState({age:event.target.value})
     }
     onChangeName=(event)=>{
-        this.setState({name:this.target.value})
+        this.setState({name:event.target.value})
     }
     onChangeLastName=(event)=>{
-        this.setState({lastname:this.target.value})
+        this.setState({lastname:event.target.value})
     }
     onSubmitSignHeandler=(event)=>{
         event.preventDefault();
+        axios.post('http://localhost:3000/register',{...this.state},{withCredentials:true}).then(
+            response=>{console.log(response)}).catch(err=>console.log(err));
 
     }
 
@@ -62,7 +65,7 @@ class SignUp extends Component{
                 <Input
               placeholder="age"
               styles={{marginRight:"5px",padding:"5px 3px"}}
-              type="number"
+              type="text"
               value={this.state.age}
               changed={this.onChangeAge} 
             />
