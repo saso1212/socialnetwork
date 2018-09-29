@@ -2,13 +2,22 @@
   "name": "socialnetwork",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
+  },
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "body-parser": "^1.18.3",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.1.4",
+    "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set port=3001 && react-scripts start react-scripts start ",
+    "server": "nodemon --inspect ./server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
