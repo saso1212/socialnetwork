@@ -1,0 +1,17 @@
+{
+	"name": "Social",
+	"devDependencies": {
+		"express": "^4.16.3",
+		"nodemon": "^1.18.4"
+	},
+	"scripts": {
+		"start": "node index.js",
+		"server": "nodemon --inspect ./index.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"express-session": "^1.15.6",
+		"mongodb": "^3.1.4",
+		"uuid": "^3.3.2"
+	}
+}
