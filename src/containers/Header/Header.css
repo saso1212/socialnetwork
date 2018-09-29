@@ -7,3 +7,16 @@
     flex-direction: row;
     justify-content: flex-end;
 }
+.Buttons{
+    align-self: center;
+    margin-right: 10px;
+}
+.Login{
+    margin: 0 10px;
+    background-color: #fff;
+    min-width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+}

@@ -8,7 +8,7 @@ class Layout extends Component{
             <div>
                 <Header/>
                 <main>
-                    {this.porps.children}
+                    {this.props.children}
                 </main>
             </div>
         )
