@@ -1,8 +1,9 @@
-import React,{Component} from "react";
+import React, {Component} from "react";
 import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
+import './SignUp.css'
 
-class SignUp extends Componenet{
+class SignUp extends Component{
     state={
         username: "",
         password: "",
@@ -18,7 +19,7 @@ class SignUp extends Componenet{
         this.setState({password:event.target.value})
     }
     onChangeEmail=(event)=>{
-        this.setState(email:event.target.value)
+        this.setState({email:event.target.value})
     }
     onChangeAge=(event)=>{
         this.setState({age:this.event.age})
@@ -31,7 +32,7 @@ class SignUp extends Componenet{
     }
     onSubmitSignHeandler=(event)=>{
         event.preventDefault();
-        
+
     }
 
     render(){
@@ -39,42 +40,42 @@ class SignUp extends Componenet{
             <form>
                 <Input
               placeholder="username"
-              styles={{marginRight:"5px",padding:"3px"}}
+              styles={{marginRight:"5px",padding:"5px 3px"}}
               type="text"
               value={this.state.username}
               changed={this.onChangeUsername} 
             />
                 <Input
               placeholder="password"
-              styles={{marginRight:"5px",padding:"3px"}}
+              styles={{marginRight:"5px",padding:"5px 3px"}}
               type="text"
               value={this.state.password}
               changed={this.onChangePassword} 
             />
                 <Input
               placeholder="email"
-              styles={{marginRight:"5px",padding:"3px"}}
+              styles={{marginRight:"5px",padding:"5px 3px"}}
               type="email"
               value={this.state.email}
               changed={this.onChangeEmail} 
             />
                 <Input
               placeholder="age"
-              styles={{marginRight:"5px",padding:"3px"}}
+              styles={{marginRight:"5px",padding:"5px 3px"}}
               type="number"
               value={this.state.age}
               changed={this.onChangeAge} 
             />
                 <Input
               placeholder="name"
-              styles={{marginRight:"5px",padding:"3px"}}
+              styles={{marginRight:"5px",padding:"5px 3px"}}
               type="text"
               value={this.state.name}
               changed={this.onChangeName} 
             />
                 <Input
               placeholder="lastname"
-              styles={{marginRight:"5px",padding:"3px"}}
+              styles={{marginRight:"5px",padding:"5px 3px"}}
               type="text"
               value={this.state.lastname}
               changed={this.onChangeLastName} 

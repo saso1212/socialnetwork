@@ -1,9 +1,9 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import './Header.css';
 import Button from '../../UI/Button/Button';
 import Input from '../../UI/Input/Input';
-
-class Header extends Component{
+import SignUp from '../../components/SignUp/SignUp';
+class Header extends Component {
     state={
             username:"",
             password:"",
@@ -28,17 +28,18 @@ class Header extends Component{
        })
     }
     render(){
+        let signUp=this.state.signUp ? <SignUp /> :null
         const buttons=<form>
             <Input
              placeholder="username"
-             styles={{marginRight:"5px",padding:"3px"}}
+             styles={{marginRight:"5px",padding:"5px 3px"}}
              type="text"
              value={this.state.username}
              changed={this.onChangeUsername} 
             />
             <Input
              placeholder="password"
-             styles={{marginRight:"5px",padding:"3px"}}
+             styles={{marginRight:"5px",padding:"5px 3px"}}
              type="password"
              value={this.state.password}
              changed={this.onChangePassword} 
@@ -55,10 +56,13 @@ class Header extends Component{
             clicked={this.onSignUpHandler}/>
             </form>
         return(
+            <div>
             <div className="Header">
-                <div className="Buttons">
-                {buttons}
+                 <div className="Buttons">
+                  {buttons}
                 </div>
+               </div>
+               {signUp}
             </div>
         )
     }
