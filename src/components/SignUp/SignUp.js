@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
 import './SignUp.css'
-import axios from 'axios';
+import axios from '../../axios';
 
 class SignUp extends Component{
     state={
@@ -33,8 +33,9 @@ class SignUp extends Component{
     }
     onSubmitSignHeandler=(event)=>{
         event.preventDefault();
-        axios.post('http://localhost:3000/register',{...this.state},{withCredentials:true}).then(
-            response=>{console.log(response)}).catch(err=>console.log(err));
+        axios.post('/register',{...this.state}).then(
+            response=>{console.log(response)})
+            .catch(err=>console.log(err));
 
     }
 
